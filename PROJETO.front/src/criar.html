@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/style.css">
+    <title>Criar Aula</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html"></a>
+            <span class="text-aulas">CRIAR NOVO</span>
+            <div class="dropdown">
+                <span class="text-minhas-aulas">MINHAS AULAS</span>
+                <button onclick="window.location.href='index.html'" class="back-button">↩</button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="edit-container">
+            <h2 class="edit-title">Criar Nova Aula</h2>
+            <form class="edit-form" method="POST" action="http://localhost:8080/aulas/criar-nova" enctype="multipart/form-data"></form>
+                <div class="edit-row">
+                    <label class="edit-label" for="materia">Matéria
+
+                        <input type="file" id="materia" name="materia" accept="image/*" class="materia_input" required>
+                </label>
+                </div>
+                <div class="edit-row">
+                    <label class="edit-label" for="conteudo">Conteúdo</label>
+                    <input type="text" id="conteudo" name="conteudo" class="edit-textbox" placeholder="Digite o conteúdo">
+                </div>
+                <div class="edit-row">
+                    <label class="edit-label" for="tipoAula">Descrição</label>
+                <select id="tipoAula" name="tipoAula">
+                    <option value="PREPARADA">Aula Preparada</option>
+                    <option value="LECIONADA">Aula Lecionada</option>
+                </select>
+                </div>
+                
+                
+            </form>
+        </div>
+    </section>
+    <button type="button" class="edit-save-button">Criar aula +</button>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ClassManager</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="criar.html" class="criar-aula"></a>
+            <a href="editar.html" class="editar-aula"></a>
+            <span class="text-aulas">AULAS</span>
+            <div class="dropdown">
+                <span class="text-minhas-aulas">MINHAS AULAS</span>
+                <span class="arrow-down">▼</span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section-container">
+            <div class="section">
+                <span class="text-aulas-preparadas">Aulas Preparadas</span>
+                <div class="table-header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Matéria</th>
+                                <th>Conteúdo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-preparadas">
+                            <tr>
+                                <td>1</td>
+                                <td><img src="./images/Linux.png" alt="Linux"></td>
+                                <td>Instalação Ubuntu</td>
+                                <td>
+                                    <button class="button-edit">
+                                        <img src="./images/editar.png" alt="icone editar">
+                                    </button>
+                                    <button class="button-trash">
+                                        <img src="./images/lixeira.png" alt="icone lixeira">
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><img src="./images/html.png" alt="HTML5"></td>
+                                <td>HTML5</td>
+                                <td>
+                                    <button class="button-edit">
+                                        <img src="./images/editar.png" alt="icone editar">
+                                    </button>
+                                    <button class="button-trash">
+                                        <img src="./images/lixeira.png" alt="icone lixeira">
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <span class="text-aulas-lecionadas">Aulas Lecionadas</span>
+                <div class="table-header">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Matéria</th>
+                                <th>Conteúdo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-lecionadas">
+                            <tr>
+                                <td>3</td>
+                                <td><img src="./images/C.jpg" alt="C#"></td>
+                                <td> Introdução a C#</td>
+                                <td>
+                                    <button class="button-edit">
+                                        <img src="./images/editar.png" alt="icone editar">
+                                    </button>
+                                    <button class="button-trash">
+                                        <img src="./images/lixeira.png" alt="icone lixeira">
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><img src="./images/Java.png" alt="Java"></td>
+                                <td>POO</td>
+                                <td>
+                                    <button class="button-edit">
+                                        <img src="./images/editar.png" alt="icone editar">
+                                    </button>
+                                    <button class="button-trash">
+                                        <img src="./images/lixeira.png" alt="icone lixeira">
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button class="button-create-new" onclick="window.location.href='criar.html'">
+            Criar novo <span class="icon-plus">+</span>
+        </button>
+    </section>
+    <div id="edit-message" class="hidden">
+        <p>Tem certeza que deseja editar essa aula?</p>
+        <div id="edit-message-buttons">
+            <button class="message-confirm">Sim</button>
+            <button class="message-cancel">Não</button>
+        </div>
+    </div>
+    <div id="delete-message" class="hidden">
+        <p>Tem certeza que deseja excluir essa aula?</p>
+        <div id="delete-message-buttons">
+            <button class="message-confirm">Sim</button>
+            <button class="message-cancel">Não</button>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
